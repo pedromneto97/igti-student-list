@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">modulo-iv</string>
+    <string name="title_activity_main">IGTI Módulo IV</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Lista de alunos</string>
+    <string name="second_fragment_label">Cadastrar aluno</string>
+    <string name="next">Próximo</string>
+    <string name="previous">Voltar</string>
+    <string name="add_student">Adicionar estudante</string>
+    <string name="create">Cadastrar</string>
+    <string name="name">Nome</string>
+    <string name="surname">Sobrenome</string>
+    <string name="birth_date">Data de nascimento</string>
+    <string name="back">Voltar</string>
+    <string name="create_successful">Cadastrado com sucesso!</string>
+    <string name="failed_to_create">Ocorreu um erro ao criar o usuário</string>
+    <string name="student_details">Detalhes do aluno</string>
+    <string name="ok">Ok</string>
+    <string name="failed_to_find_studant">Ocorreu um erro ao buscar o estudante</string>
+    <string name="update">Atualizar</string>
+    <string name="create_student">Adicionar estudante</string>
+    <string name="failed_to_delete_student">Não foi possível apagar o aluno</string>
+    <string name="student_deleted_successfully">Aluno apagado com sucesso!</string>
+</resources>
