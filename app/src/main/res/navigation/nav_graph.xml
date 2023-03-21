@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/studentsListFragment">
+
+    <fragment
+        android:id="@+id/studentsListFragment"
+        android:name="br.eng.pedro_mendes.modulo_iv.ui.students_list.StudentListFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_list_students">
+        <action
+            android:id="@+id/action_studentsListFragment_to_createStudentFragment"
+            app:destination="@id/createStudentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/studentsListFragment" />
+        <action
+            android:id="@+id/action_studentsListFragment_to_studentDetailsFragment"
+            app:destination="@id/studentDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/studentsListFragment">
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_studentsListFragment_to_updateStudentFragment2"
+            app:destination="@id/updateStudentFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/studentsListFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/studentDetailsFragment"
+        android:name="br.eng.pedro_mendes.modulo_iv.ui.student_details.StudentDetailsFragment"
+        android:label="fragment_student_details"
+        tools:layout="@layout/fragment_student_details">
+        <argument
+            android:name="id"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/createStudentFragment"
+        android:name="br.eng.pedro_mendes.modulo_iv.ui.create_student.CreateStudentFragment"
+        android:label="fragment_create_student"
+        tools:layout="@layout/fragment_create_student" />
+    <fragment
+        android:id="@+id/updateStudentFragment"
+        android:name="br.eng.pedro_mendes.modulo_iv.ui.update_student.UpdateStudentFragment"
+        android:label="fragment_update_student"
+        tools:layout="@layout/fragment_update_student">
+        <argument
+            android:name="Student"
+            app:argType="br.eng.pedro_mendes.modulo_iv.data.remote.dto.StudentResponseDto" />
+    </fragment>
+</navigation>
